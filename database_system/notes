@@ -46,3 +46,27 @@ A **database** is a structured way to store, manage, and retrieve data efficient
 📌 **Education** – Student information, courses, grades.  
 
 Would you like to explore **database types** (Relational vs. NoSQL) next? 🚀
+
+
+### **Data vs. Information: What's the Difference?**  
+
+Although people often use **data** and **information** interchangeably, they are **not the same**.  
+
+| **Aspect**     | **Data** | **Information** |
+|---------------|---------|---------------|
+| **Definition** | Raw, unprocessed facts and figures. | Processed, organized, and meaningful data. |
+| **Nature** | Unstructured, unorganized. | Structured, organized, and useful. |
+| **Meaning** | Has no meaning on its own. | Has context and significance. |
+| **Example (Numbers in a Hospital System)** | `120/80`, `98.6`, `72 bpm` | "The patient has normal blood pressure, body temperature, and heart rate." |
+| **Example (E-commerce Data)** | `Order ID: 1002`, `Customer ID: 56`, `Amount: $25` | "Customer 56 placed an order for $25." |
+
+### **Real-World Example: Weather Data vs. Information**  
+🌡 **Data** → `Temperature: 30°C`, `Humidity: 70%`, `Wind Speed: 10 km/h`  
+📢 **Information** → "Today’s weather is hot and humid with moderate wind speed."  
+
+### **Key Takeaways**  
+✅ **Data is raw input**, while **information is processed output**.  
+✅ **Data alone is meaningless** until it is analyzed and given context.  
+✅ **Information helps in decision-making**, while data needs processing to become useful.  
+
+Would you like to explore how databases **store and convert data into information**? 🚀
