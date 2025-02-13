@@ -1,0 +1,31 @@
+
+# Review Questions (refer to Chapter 1, page 26)
+Define each of the following terms:
+a. data
+b. field
+c. record
+d. file
+2. What is data redundancy, and which characteristics of the file system can lead to it?
+3. What is data independence, and why is it lacking in file systems?
+4. What is a DBMS, and what are its functions?
+5. What is structural independence, and why is it important?
+6. Explain the difference between data and information.
+7. What is the role of a DBMS, and what are its advantages? What are its disadvantages?
+8. List and describe the different types of databases.
+9. What are the main components of a database system?
+10. What are metadata?
+11. Explain why database design is important.
+12. What are the potential costs of implementing a database system?
+13. Use examples to compare and contrast unstructured and structured data. Which type is more prevalent in a
+typical business environment?
+14. What are some basic database functions that a spreadsheet cannot perform?
+15. What common problems does a collection of spreadsheets created by end users share with the typical file system?
+16. Explain the significance of the loss of direct, hands-on access to business data that end users experienced with
+the advent of computerized data repositories.
+
+
+
+# Practical Problems to solve (refer to page 27)
+
+The file structures you see in this problem set are simulated in a Microsoft Access database named
+Ch01_Problems, available in the Premium Website for this book....
