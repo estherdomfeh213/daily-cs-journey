@@ -163,3 +163,103 @@ int main() {
 
 
 
+### **Algorithm for Deletion in a 1D Array**
+
+#### **Definition:**
+Deletion in an array refers to **removing an element** from a specified position. After deletion, the array elements after the deleted element must be **shifted** to fill the gap left by the deleted element.
+
+---
+
+### **🔹 Algorithm (Pseudocode)**
+```
+Algorithm Deletion(arr, n, index)
+1. Start
+2. If index < 0 or index >= n, return "Invalid index"  // Ensure valid index
+3. For i = index to n-2 do
+      a. arr[i] = arr[i+1]   // Shift elements to the left
+4. n = n - 1               // Decrease the size of the array
+5. End
+6. Stop
+```
+- **`arr`** is the array from which the element is deleted.
+- **`n`** is the number of elements in the array before deletion.
+- **`index`** is the position of the element to be deleted.
+
+---
+
+### **🔹 Deletion Example in Python**
+```python
+def delete_element(arr, index):
+    n = len(arr)
+    
+    # Check if the index is valid
+    if index < 0 or index >= n:
+        print("Invalid index")
+        return
+    
+    # Shift elements to the left
+    for i in range(index, n-1):
+        arr[i] = arr[i+1]
+    
+    arr.pop()  # Remove the last element to shrink the array
+
+# Example Usage
+numbers = [10, 20, 30, 40, 50]
+delete_element(numbers, 2)  # Delete the element at index 2
+print(numbers)
+```
+**💡 Output:**
+```
+[10, 20, 40, 50]
+```
+
+---
+
+### **🔹 Deletion Example in C**
+```c
+#include <stdio.h>
+
+void deleteElement(int arr[], int *n, int index) {
+    if (index < 0 || index >= *n) {
+        printf("Invalid index\n");
+        return;
+    }
+
+    // Shift elements to the left
+    for (int i = index; i < *n - 1; i++) {
+        arr[i] = arr[i+1];
+    }
+    (*n)--;  // Decrease the size of the array
+}
+
+int main() {
+    int numbers[5] = {10, 20, 30, 40, 50};
+    int size = 5;
+    
+    deleteElement(numbers, &size, 2);  // Delete the element at index 2
+
+    for (int i = 0; i < size; i++) {
+        printf("%d ", numbers[i]);
+    }
+    return 0;
+}
+```
+**💡 Output:**
+```
+10 20 40 50
+```
+
+---
+
+### **🔹 Time Complexity**  
+✅ **Best Case:** `O(n)` (Shifting all elements after the deleted index).  
+✅ **Worst Case:** `O(n)` (Same as the best case, as we have to shift multiple elements).
+
+---
+
+### **🔹 Key Considerations**  
+- If you delete at the **beginning**, you need to shift all the elements to the left.
+- If you delete at the **end**, there's no shifting required, but the size of the array still needs to be updated.
+
+---
+
