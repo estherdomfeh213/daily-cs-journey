@@ -1,0 +1,165 @@
+### **Algorithm for Traversing a 1D Array**  
+
+#### **Definition:**  
+Traversal in an array means visiting each element **one by one** and performing an operation (e.g., printing, summing, or modifying).  
+
+---
+
+### **🔹 Algorithm (Pseudocode)**
+```
+Algorithm TraverseArray(arr, n)
+1. Start
+2. For i = 0 to n-1 do
+      a. Access arr[i]
+      b. Perform an operation (e.g., print arr[i])
+3. End For
+4. Stop
+```
+📌 **`arr`** is the array, and **`n`** is the number of elements.  
+
+---
+
+### **🔹 Implementation in Python**
+```python
+def traverse_array(arr):
+    for i in range(len(arr)):  
+        print(arr[i], end=" ")  # Printing each element
+
+# Example Usage
+numbers = [10, 20, 30, 40, 50]
+traverse_array(numbers)
+```
+**💡 Output:**  
+```
+10 20 30 40 50
+```
+
+---
+
+### **🔹 Implementation in C**
+```c
+#include <stdio.h>
+
+void traverseArray(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]); // Printing each element
+    }
+}
+
+int main() {
+    int numbers[] = {10, 20, 30, 40, 50};
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+    traverseArray(numbers, size);
+    return 0;
+}
+```
+**💡 Output:**  
+```
+10 20 30 40 50
+```
+
+---
+
+### **🔹 Time Complexity**  
+✅ **Best Case:** `O(n)` (We visit each element once).  
+✅ **Worst Case:** `O(n)` (Same as best case since we must visit all elements).  
+
+---
+
+
+
+### **Algorithm for Insertion in a 1D Array**
+
+#### **Definition:**
+Insertion in an array refers to **adding a new element** at a specified position. After insertion, the array elements after the insertion point must be **shifted** to accommodate the new element.
+
+---
+
+### **🔹 Algorithm (Pseudocode)**
+```
+Algorithm Insertion(arr, n, index, value)
+1. Start
+2. If index < 0 or index > n, return "Invalid index"  // Ensure valid index
+3. For i = n-1 to index do
+      a. arr[i+1] = arr[i]   // Shift elements to the right
+4. arr[index] = value      // Insert the new element at the specified index
+5. n = n + 1               // Increase the size of the array
+6. End
+7. Stop
+```
+- **`arr`** is the array where the element is inserted.
+- **`n`** is the number of elements in the array before insertion.
+- **`index`** is the position where the new element is to be inserted.
+- **`value`** is the element to be inserted.
+
+---
+
+### **🔹 Insertion Example in Python**
+```python
+def insert_element(arr, index, value):
+    n = len(arr)
+    
+    # Shift elements to the right
+    arr.append(0)  # Expand the array by one element (to accommodate new element)
+    for i in range(n-1, index-1, -1):
+        arr[i+1] = arr[i]
+    
+    arr[index] = value  # Insert the new element at the specified index
+
+# Example Usage
+numbers = [10, 20, 30, 40, 50]
+insert_element(numbers, 2, 25)  # Insert 25 at index 2
+print(numbers)
+```
+**💡 Output:**
+```
+[10, 20, 25, 30, 40, 50]
+```
+
+---
+
+### **🔹 Insertion Example in C**
+```c
+#include <stdio.h>
+
+void insertElement(int arr[], int *n, int index, int value) {
+    for (int i = *n - 1; i >= index; i--) {
+        arr[i+1] = arr[i];  // Shift elements to the right
+    }
+    arr[index] = value;  // Insert the new element at the specified index
+    (*n)++;  // Increase the size of the array
+}
+
+int main() {
+    int numbers[6] = {10, 20, 30, 40, 50};  // Array with 5 elements
+    int size = 5;
+    
+    insertElement(numbers, &size, 2, 25);  // Insert 25 at index 2
+
+    for (int i = 0; i < size; i++) {
+        printf("%d ", numbers[i]);
+    }
+    return 0;
+}
+```
+**💡 Output:**
+```
+10 20 25 30 40 50
+```
+
+---
+
+### **🔹 Time Complexity**  
+✅ **Best Case:** `O(n)` (Shifting all elements after the insertion index).  
+✅ **Worst Case:** `O(n)` (Same as the best case, as we may have to shift multiple elements in large arrays).  
+
+---
+
+### **🔹 Key Considerations**  
+- If you insert at the **beginning**, all elements need to be shifted.
+- If you insert at the **end**, there's no need to shift, but you still need to ensure the array has space.
+
+---
+
+
+
