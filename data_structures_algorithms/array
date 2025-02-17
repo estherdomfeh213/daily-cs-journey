@@ -263,3 +263,46 @@ int main() {
 
 ---
 
+
+## Search algorithm 
+
+Algorithm  for Linear search 
+Algorithm LinearSearch(arr, n, target)
+1. Start
+2. For i = 0 to n-1 do
+      a. If arr[i] == target, return i  // Element found at index i
+3. Return -1  // Element not found
+4. End
+5. Stop
+
+
+Example Implementation in Python 
+
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i  # Element found at index i
+    return -1  # Element not found
+
+# Example Usage
+numbers = [10, 20, 30, 40, 50]
+index = linear_search(numbers, 30)  # Searching for 30
+print("Element found at index:", index)
+
+
+
+🔹 Bubble Sort
+Overview:
+Bubble Sort is one of the simplest sorting algorithms. It repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until the list is sorted.
+
+🔹 Algorithm for Bubble Sort
+vbnet
+Copy
+Edit
+Algorithm BubbleSort(arr, n)
+1. Start
+2. For i = 0 to n-1 do
+    a. For j = 0 to n-i-1 do
+        i. If arr[j] > arr[j+1], swap arr[j] and arr[j+1]
+3. End
+4. Stop
